@@ -15,8 +15,8 @@ function search_(){
     xhr.onload = function(e) {
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
-      var contents = db.exec("SELECT * FROM osymmaxmintablo4");
-      console.log(contents.values[0]);
+      var contents = db.exec("SELECT * FROM osymmaxmintablo4 WHERE Program = 103110072");
+      console.log(contents[0].values[0]);
       something = contents;
     };
 xhr.send();
