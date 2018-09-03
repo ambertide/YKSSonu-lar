@@ -1,4 +1,4 @@
-var SQL= window.SQL("sql.js")
+var SQL= window.SQL;
 var form = document.getElementById("theform");
 var selection = form.selection;
 var entry_ = form.entry_
@@ -15,7 +15,7 @@ function search_(){
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
       var contents = db.exec("SELECT * FROM 'osymmaxmintablo4' WHERE 'Program Adı' LIKE '%İZMİR%' ");
-      console.log(contents)
+      console.log(contents);
     };
 xhr.send();
 }
