@@ -3,7 +3,6 @@ var form = document.getElementById("theform");
 var selection = form.selection;
 var entry_ = form.entry_
 var button = form.button_;
-var contents;
 var printOut = document.getElementById("ocelot");
 button.addEventListener("click", search_);
 
