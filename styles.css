@@ -1,0 +1,25 @@
+div {
+  margin: auto;
+  max-width: 600px;
+}
+
+body {
+  background-image: url("bg.jpg");
+  background-size: cover;
+}
+
+#lion {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  height: 25%;
+}
+
+#entryarea {
+  width: 100%;
+}
+
+#cat {
+  width: 100%
+}
