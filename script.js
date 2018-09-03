@@ -1,4 +1,4 @@
-
+var SQL= window.SQL("sql.js")
 var form = document.getElementById("theform");
 var selection = form.selection;
 var entry_ = form.entry_
