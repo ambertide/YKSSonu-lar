@@ -4,6 +4,7 @@ var selection = form.selection;
 var entry_ = form.entry_
 var button = form.button_;
 var printOut = document.getElementById("ocelot");
+var somethin = {};
 button.addEventListener("click", search_);
 
 function search_(){
@@ -15,7 +16,8 @@ function search_(){
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
       var contents = db.exec("SELECT * FROM osymmaxmintablo4");
-      console.log(contents.values[0];
+      console.log(contents.values[0]);
+      something = contents;
     };
 xhr.send();
 }
