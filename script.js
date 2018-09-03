@@ -15,7 +15,7 @@ function search_(){
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
       var contents = db.exec("SELECT * FROM osymmaxmintablo4");
-      console.log(contents[0]);
+      printOut.innerHTML = contents;
     };
 xhr.send();
 }
