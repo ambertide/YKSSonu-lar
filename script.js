@@ -15,7 +15,7 @@ function search_(){
     xhr.onload = function(e) {
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
-      var contents = db.exec("SELECT * FROM 'osymmaxmintablo4' WHERE 'Program Adı' LIKE '%İZMİR%' ");
+      var contents = db.exec("SELECT * FROM 'osymmaxmintablo4' WHERE 'Program Adı' LIKE '%İZMİR%'");
     };
 xhr.send();
 console.log(contents);
