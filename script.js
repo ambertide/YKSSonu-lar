@@ -5,6 +5,7 @@ var entry_ = form.entry_
 var button = form.button_;
 var printOut = document.getElementById("ocelot");
 var somethin = {};
+console.log("hiii")
 button.addEventListener("click", search_);
 
 function search_(){
@@ -15,7 +16,7 @@ function search_(){
     xhr.onload = function(e) {
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
-      var contents = db.exec("SELECT * FROM osymmaxmintablo4 WHERE `Program Adı` LIKE '%" + entry_.value + "''");
+      var contents = db.exec("SELECT * FROM osymmaxmintablo4 WHERE `Program Adı` LIKE '%" + entry_.value + "'");
       console.log(contents[0].values[0]);
       something = contents;
     };
