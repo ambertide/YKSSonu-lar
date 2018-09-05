@@ -5,16 +5,15 @@ div {
 
 #rustyspottedcat {
   width: 100%;
+  background: white;
   max-height: 400px;
 }
 
-th, td {
+th, td, tr {
   background-color: #ffffff;
   border: 1px solid #dddddd;
 }
 
-tr:nth-child(2) {
-    background-color: #dddddd;
 }
 
 body {
