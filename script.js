@@ -17,14 +17,15 @@ function search_(){
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
       var contents = db.exec("SELECT * FROM osymmaxmintablo4 WHERE `Program Adı` LIKE \"%" + entry_.value + "%\"");
-      for (i in contents[0].values) {
-        var row = printOut.insertRow(0);
-        for (j in contents[0].values[i]) {
-          var cell = row.insertCell(j)
-          cell.innerHTML = contents[0].values[i][j];
-        }
-      }
       something = contents;
     };
-xhr.send();
-}
+    xhr.send();
+
+    for (i in something[0].values) {
+      var row = printOut.insertRow(0);
+      for (j in something[0].values[i]) {
+        var cell = row.insertCell(j)
+        cell.innerHTML = something[0].values[i][j];
+      }
+    }
+};
