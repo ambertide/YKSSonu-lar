@@ -3,7 +3,7 @@ var form = document.getElementById("theform");
 var selection = form.selection;
 var entry_ = form.entry_
 var button = form.button_;
-var printOut = document.getElementById("ocelot");
+var printOut = document.getElementById("rustspottedcat");
 var somethin = {};
 console.log("hello darkness my old frieeeendd")
 button.addEventListener("click", search_);
@@ -17,7 +17,13 @@ function search_(){
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
       var contents = db.exec("SELECT * FROM osymmaxmintablo4 WHERE `Program Adı` LIKE \"%" + entry_.value + "%\"");
-      printOut.innerHTML = "Aramanızın İlk Beş Sonucu: \n" + contents[0].values[0]; + "\n" + contents[0].values[1]; + "\n" + contents[0].values[2]; + "\n" + contents[0].values[3]; + "\n" + contents[0].values[4];
+      for (i in contents[0].values) {
+        var row = printOut.insertRow(0);
+        for (j in contents[0].values[i]) {
+          var cell = row.insertCell(j)
+          cell.innerHTML = contents[0].values[i][j];
+        }
+      }
       something = contents;
     };
 xhr.send();
