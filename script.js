@@ -4,8 +4,7 @@ var selection = form.selection;
 var entry_ = form.entry_
 var button = form.button_;
 var printOut = document.getElementById("rustyspottedcat");
-var something = {};
-console.log("hello darkness my old frieeeendd")
+console.log("FINNALY");
 button.addEventListener("click", search_);
 
 function search_(){
@@ -17,12 +16,12 @@ function search_(){
       var uInt8Array = new Uint8Array(this.response);
       var db = new SQL.Database(uInt8Array);
       var contents = db.exec("SELECT * FROM osymmaxmintablo4 WHERE `Program Adı` LIKE \"%" + entry_.value + "%\"");
-      something = contents;
+      var something = contents;
     };
     xhr.send();
 
     for (i in something[0].values) {
-      var row = printOut.insertRow(0);
+      var row = printOut.insertRow(1);
       for (j in something[0].values[i]) {
         var cell = row.insertCell(j)
         cell.innerHTML = something[0].values[i][j];

@@ -3,6 +3,10 @@ div {
   max-width: 800px;
 }
 
+#rustspottedcat {
+  background-color: white;
+  max-height: 400;
+}
 body {
   background-image: url("bg.jpg");
   background-size: cover;
