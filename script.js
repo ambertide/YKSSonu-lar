@@ -4,6 +4,7 @@ var selection = form.selection;
 var entry_ = form.entry_
 var button = form.button_;
 var printOut = document.getElementById("rustyspottedcat");
+var something = {};
 console.log("FINNALY");
 button.addEventListener("click", search_);
 
